@@ -140,7 +140,7 @@ resultVideo.src = '';
 downloadBtn.style.display = 'none';
 
 try {
-const response = await fetch('/api/generate', {
+const response = await fetch('/API/generate', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({
@@ -176,7 +176,7 @@ const maxAttempts = 30;
 const poll = setInterval(async () => {
 attempts++;
 try {
-const statusRes = await fetch(`/api/status?jobId=${data.jobId}`);
+const statusRes = await fetch(`/API/status?jobId=${data.jobId}`);
 const statusData = await statusRes.json();
 if (statusData.status === 'complete' && statusData.video_url) {
 clearInterval(poll);
