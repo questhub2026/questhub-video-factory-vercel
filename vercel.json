@@ -1,15 +1,12 @@
 
 {
-
-"rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-
 "functions": {
-
-"API/*": { "runtime": "nodejs20.x" }
-
+"API/*.js": {
+"runtime": "nodejs20.x"
+}
+}
 }
 
-}
 
 
 
